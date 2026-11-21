@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Pulso Abierto - Criptomonedas (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React**, **TypeScript** y **Vite** para consultar cotizaciones y métricas clave de criptomonedas principales (**Bitcoin**, **Ethereum** y **Solana**), buscar y filtrar activos, visualizar vistas de detalle y gestionar una lista persistente de favoritos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Enlaces del proyecto
 
-## React Compiler
+- **Aplicación publicada (Vercel):** [https://pulso-abierto-blush.vercel.app](https://pulso-abierto-blush.vercel.app)
+- **Repositorio en GitHub:** [https://github.com/britezbrian21/pulso-abierto](https://github.com/britezbrian21/pulso-abierto)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Funcionalidades principales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Listado y cotizaciones en tiempo real:** Consulta de precios y variación porcentual en 24h de Bitcoin (BTC), Ethereum (ETH) y Solana (SOL).
+- **Búsqueda y filtrado:** Formulario interactivo para filtrar criptomonedas por nombre, símbolo o criterio seleccionado.
+- **Vista de detalle:** Navegación dedicada para inspeccionar información detallada de cada activo y manejo de rutas no encontradas (`404`).
+- **Gestión de favoritos:** Almacenamiento persistente de criptomonedas favoritas mediante estado global y almacenamiento local.
+- **Diseño responsivo:** Interfaz adaptable a pantallas de escritorio y dispositivos móviles.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tecnologías utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React 19** + **TypeScript**
+- **Vite** (entorno de desarrollo y empaquetado productivo)
+- **Vitest** + **Testing Library** (pruebas unitarias y de componentes)
+- **ESLint** (análisis estático y calidad de código)
 
-```
+---
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalación y ejecución local
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/britezbrian21/pulso-abierto.git](https://github.com/britezbrian21/pulso-abierto.git)
+   cd pulso-abierto
